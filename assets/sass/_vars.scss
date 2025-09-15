@@ -1,0 +1,13 @@
+// Variables
+:root {
+    // variables    
+    --gap: 1rem;
+    --gap--half: calc(var(--gap) / 2);
+    --gap--quarter: calc(var(--gap) / 4);
+    --gap--double: calc(var(--gap) * 2);
+    --gap--triple: calc(var(--gap) * 3);
+    // icons size
+    --icon--sm: 16px;
+    --icon--md: 24px;
+    --icon--lg: 32px;
+}

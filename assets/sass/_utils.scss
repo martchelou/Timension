@@ -1,0 +1,31 @@
+.container {
+    width: clamp(320px, 96%, 980px);
+    margin: 0 auto;
+}
+.m-0 {
+    margin: 0;
+}
+.p-0 {
+    padding: 0;
+}
+body {font-family: sans-serif;}
+h1,h2,h3 {font-weight: 300;}
+ul,ol {
+    margin-bottom: var(--gap);
+    li {margin-bottom: var(--gap);}
+}
+p {
+    margin-bottom: 1rem;
+    em, i {font-style: italic;}
+    strong, b {font-weight: bold;}
+    del {text-decoration: line-through;}
+    u {text-decoration: underline;}    
+    big, .big {font-size: 1.3rem;}
+    small, .small {font-size: .65rem;}
+    &.lead {font-size: 1.4rem;}
+    &:last-child {margin-bottom: 0;}
+}
+a {
+    text-decoration: none;
+    &:hover {text-decoration: underline;}
+}

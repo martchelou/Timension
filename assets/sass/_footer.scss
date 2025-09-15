@@ -1,0 +1,9 @@
+footer {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;    
+    .container {
+        color: var(--white);
+        padding: calc(var(--gap) * 1) 0;
+        border-top: 1px solid var(--green--800);
+    }
+}

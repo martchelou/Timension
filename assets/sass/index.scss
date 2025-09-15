@@ -1,0 +1,10 @@
+@use 'colors';
+@use 'vars';
+@use 'utils';
+@use 'reset'; 
+@use 'watch';
+@use 'header';
+@use 'main';
+@use 'footer';
+
+// sass --watch --style=compressed ./assets/sass/index.scss:./public/css/style.min.css
