@@ -1,97 +1,88 @@
-@property --deg{
-    syntax: "<angle>";
-    inherits: true;
-    initial-value: 0deg;
-}
 .watch {
-    color: var(--white);
-    width: 400px;
-    height: 400px;
-    aspect-ratio: 1/1;
-    margin: 0 auto;
-    border-radius: 50%;
-
     display: grid;
     place-items: center;
-
-    .seconds {
-        display: grid;
-        place-items: center;
-
-        padding: calc(var(--gap) * 1);
-        aspect-ratio: 1/1;
-        border-radius: 50%;
-
-        width: 100%;
-        height: 100%;
-
-        background: conic-gradient(
-            from var(--deg) at center,
-            var(--white),
-            var(--green--600),
-            var(--black)
-        );
-        animation: autoRotate 60s linear infinite;
-
-        .minutes {
-
-            display: grid;
-            place-items: center;
-
-            padding: calc(var(--gap) * 4);
-            aspect-ratio: 1/1;
-            border-radius: 50%;
-
-            width: 100%;
-            height: 100%;
-            background: conic-gradient(
-                from var(--deg) at center,
-                var(--white),
-                var(--green--600),
-                var(--black)
-            );
-            animation: autoRotate 60s linear infinite;
-            .hours {
-
-                display: grid;
-                place-items: center;
-
-                padding: calc(var(--gap) * 6);
-                aspect-ratio: 1/1;
-                border-radius: 50%;
-
-                // text-align: center;
-
-                width: 100%;
-                height: 100%;
-                background: conic-gradient(
-                    from var(--deg) at center,
-                    var(--white),
-                    var(--green--600),
-                    var(--black)
-                );
-                animation: autoRotate 60s linear infinite;
-                .time {
-                    display: grid;
-                    place-items: center;
-
-                    padding: calc(var(--gap) * 2);
-                    aspect-ratio: 1/1;
-                    border-radius: 50%;
-
-                    text-align: center;
-
-                    width: 100%;
-                    height: 100%;
-                    background-color: var(--green--900);
-                }
-            }
-        }
-    }
+    margin: 0 auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: calc(var(--gap) / 3) solid var(--blue--900);
+    width: 300px;
+    height: 300px;
+    position: relative;
 }
-
-@keyframes autoRotate {
-    to {
-        --deg:360deg;
-    }  
+.watch > div {
+    position: absolute;
+    border-radius: 50%;
+    transition: transform 1s cubic-bezier(0.4, 2.3, 0.6, 0.7);
+}
+.seconds {
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(
+    from var(--deg) at center,
+        var(--white),
+        var(--blue--50),
+        var(--blue--100),
+        var(--blue--200),
+        var(--blue--300),
+        var(--blue--400),
+        var(--blue--500),
+        var(--blue--600),
+        var(--blue--700),
+        var(--blue--800),
+        var(--blue--900),
+        var(--black)
+    );
+    z-index: 1;
+}
+.minutes {
+    width: 90%;
+    height: 90%;
+    background: conic-gradient(
+        from var(--deg) at center,
+        var(--white),
+        var(--blue--50),
+        var(--blue--100),
+        var(--blue--200),
+        var(--blue--300),
+        var(--blue--400),
+        var(--blue--500),
+        var(--blue--600),
+        var(--blue--700),
+        var(--blue--800),
+        var(--blue--900),
+        var(--black)
+    );
+    z-index: 2;
+}
+.hours {
+    width: 70%;
+    height: 70%;
+    background: conic-gradient(
+        from var(--deg) at center,
+        var(--white),
+        var(--blue--50),
+        var(--blue--100),
+        var(--blue--200),
+        var(--blue--300),
+        var(--blue--400),
+        var(--blue--500),
+        var(--blue--600),
+        var(--blue--700),
+        var(--blue--800),
+        var(--blue--900),
+        var(--black)
+    );
+    z-index: 3;
+}
+.time {
+    font-size: calc(var(--gap) * 3);
+    font-weight: 200;
+    display: grid;
+    place-items: center;
+    background-color: var(--blue--900);
+    text-align: center;
+    z-index: 4;
+    width: 50%;
+    height: 50%;
+    opacity: .75;
 }

@@ -11,3 +11,8 @@
     --icon--md: 24px;
     --icon--lg: 32px;
 }
+@property --deg{
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0deg;
+}
