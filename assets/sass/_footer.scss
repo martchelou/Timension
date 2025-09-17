@@ -5,5 +5,17 @@ footer {
         color: var(--white);
         padding: calc(var(--gap) * 1) 0;
         border-top: 1px solid var(--white);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        nav {
+            a {
+                color: var(--white);
+                &:hover {
+                    color: var(--blue--500);
+                }
+            }
+        }
     }
 }

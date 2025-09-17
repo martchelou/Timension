@@ -2,7 +2,7 @@ const secondsElement = document.querySelector('.seconds');
 const minutesElement = document.querySelector('.minutes');
 const hoursElement = document.querySelector('.hours');
 const timeElement = document.querySelector('.time');
-const  setRotation = (element, rotation) => element.style.transform = `rotate(${rotation}deg)`;
+const setRotation = (element, rotation) => element.style.transform = `rotate(${rotation}deg)`;
 const updateWatch = () =>
 {
     const now = new Date();
