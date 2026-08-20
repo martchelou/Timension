@@ -1,8 +1,11 @@
+// base
+@use 'reset'; 
 @use 'colors';
 @use 'vars';
+// utilities
 @use 'utils';
-@use 'reset'; 
 @use 'watch';
+// layout
 @use 'header';
 @use 'main';
 @use 'footer';

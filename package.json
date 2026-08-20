@@ -1,19 +1,13 @@
 {
   "name": "relogio-hans-donner",
   "version": "1.0.0",
-  "description": "",
-  "main": "Gruntfile.js",
+  "description": "um projeto que replica em html, css e javascript o relógio criado por Hans Donner, com opções de cores e mostrador digital.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:js":"node build.js",
+    "dev:css": "sass --watch --style=compressed ./assets/sass/index.scss:./public/css/style.min.css"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
-    "grunt": "^1.6.1",
-    "grunt-contrib-sass": "^2.0.0",
-    "grunt-contrib-uglify": "^5.2.2",
-    "grunt-contrib-watch": "^1.1.0"
+    "esbuild": "^0.28.2"
   }
 }
